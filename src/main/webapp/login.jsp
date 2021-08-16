@@ -80,15 +80,14 @@
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <button type="submit">Login</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
+        <script>
+            let user = document.getElementsByName("usn");
+        </script>
+        <button type="submit" onclick="window.location.href='clientHome.jsp?user=${user}'">Login</button>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <button type="button" class="cancelbtn" onclick="window.location.href='index.jsp'">Cancel</button>
     </div>
 </form>
 

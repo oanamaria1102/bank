@@ -4,6 +4,7 @@ public class RONAccount implements Account{
 
     public RONAccount(){
         ronAmount = 0;
+        accountNr = "RON" + Math.random() * 100000;
     }
 
     @Override
@@ -28,4 +29,15 @@ public class RONAccount implements Account{
     public float checkSold() {
         return ronAmount;
     }
+
+    @Override
+    public float getAmount() {
+        return ronAmount;
+    }
+
+    @Override
+    public String getAccountNr() {
+        return accountNr;
+    }
+
 }

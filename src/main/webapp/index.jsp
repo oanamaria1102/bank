@@ -38,7 +38,7 @@
             background-color: #FFD700;
         }
 
-        .button {
+        button {
             display: inline-block;
             padding: 15px 25px;
             font-size: 24px;
@@ -79,7 +79,7 @@
 <h2><mark>Create an account</mark></h2>
 <h3><mark>to the best bank,</mark></h3>
 <h4><mark>Revo Bank!</mark></h4>
-<button class="button button1"><b>Register</b></button>
-<button class="button button2"><b>Login</b></button>
+<button type="button" class="button1" onclick="window.location.href='register.jsp'"><b>Register</b></button>
+<button type="button" class="button2" onclick="window.location.href='login.jsp'"><b>Login</b></button>
 </body>
 </html>

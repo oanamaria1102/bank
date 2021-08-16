@@ -68,7 +68,7 @@
 
 <h2>Revo Bank</h2>
 
-<form action="/" method="post">
+<form action="register">
     <div class="imgcontainer">
         <img src="res/img_avatar2.png" alt="Avatar" class="avatar">
     </div>
@@ -81,13 +81,13 @@
         <input type="password" placeholder="Enter Password" name="psw" required>
 
         <label><b>Confirm Password</b></label>
-        <input type="confpassword" placeholder="Enter Password" name="cpsw" required>
+        <input type="password" placeholder="Confirm Password" name="cpsw" required>
 
-        <button type="submit">Create Account</button>
+        <button type="submit" onclick="window.location.href='login.jsp'">Create Account</button>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="button" class="cancelbtn" onclick="window.location.href='index.jsp'">Cancel</button>
     </div>
 </form>
 

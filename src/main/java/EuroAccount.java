@@ -4,6 +4,7 @@ public class EuroAccount implements Account{
 
     public EuroAccount(){
         euroAmount = 0;
+        accountNr = "EUR" + Math.random() * 100000;
     }
 
     @Override
@@ -28,4 +29,15 @@ public class EuroAccount implements Account{
     public float checkSold() {
         return euroAmount;
     }
+
+    @Override
+    public float getAmount() {
+        return euroAmount;
+    }
+
+    @Override
+    public String getAccountNr() {
+        return accountNr;
+    }
+
 }

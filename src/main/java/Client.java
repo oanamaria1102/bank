@@ -12,4 +12,19 @@ public class Client {
         euroAccount = accountFactory.getType(euroAmount);
     }
 
+    public Account getRonAccount() {
+        return ronAccount;
+    }
+
+    public void setRonAccount(Account ronAccount) {
+        this.ronAccount = ronAccount;
+    }
+
+    public Account getEuroAccount() {
+        return euroAccount;
+    }
+
+    public void setEuroAccount(Account euroAccount) {
+        this.euroAccount = euroAccount;
+    }
 }
