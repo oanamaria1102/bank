@@ -1,10 +1,12 @@
+package com.example.demo;
+
 public class RONAccount implements Account{
     private float ronAmount;
     private String accountNr;
 
     public RONAccount(){
         ronAmount = 0;
-        accountNr = "RON" + Math.random() * 100000;
+        accountNr = "RON" + (int) (Math.random() * 100000);
     }
 
     @Override

@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.example.demo.Bank" %><%--
   Created by IntelliJ IDEA.
   User: oanam
   Date: 8/16/2021
@@ -55,16 +55,20 @@
 </head>
 <body>
 <h1>Revo Bank</h1>
-<img id = "right" src="src/bank.jpg"/>
+<img id = "right" src="res/bank.jpg"/>
 <h2><mark>Welcome to</mark></h2>
 <h3><mark>Revo Bank!</mark></h3>
+<%
+  String username = request.getParameter("usn");
+
+%>
 <div class="clientContainer">
-  <h4><a href="queryBalance.jsp">Query balance.</a></h4>
+  <h4><a href="queryBalance.jsp?usn=<%=username%>">Query balance.</a></h4>
   <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Add money to EURO account.</a></h4>
   <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Add money to RON account.</a></h4>
   <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Withdraw money from the EURO account.</a></h4>
   <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Withdraw money from the RON account.</a></h4>
-  <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Close account.</a></h4>
+  <h4><a href="index.jsp" onclick="<%Bank.closeAccount(username);%>">Close account.</a></h4>
 </div>
 </body>
 </html>

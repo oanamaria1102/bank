@@ -68,7 +68,7 @@
 
 <h2>Welcome to Revo Bank, we are here support to you!</h2>
 
-<form action="/" method="post">
+<form action="login" method="post">
     <div class="imgcontainer">
         <img src="res/img_avatar2.png" alt="Avatar" class="avatar">
     </div>
@@ -80,10 +80,7 @@
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <script>
-            let user = document.getElementsByName("usn");
-        </script>
-        <button type="submit" onclick="window.location.href='clientHome.jsp?user=${user}'">Login</button>
+        <button type="submit">Login</button>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">

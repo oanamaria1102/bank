@@ -1,3 +1,5 @@
+package com.example.demo;
+
 public class Client {
     private String cnp;
     private String password;
@@ -11,6 +13,8 @@ public class Client {
         ronAccount = accountFactory.getType(ronAmount);
         euroAccount = accountFactory.getType(euroAmount);
     }
+
+    public Client(){}
 
     public Account getRonAccount() {
         return ronAccount;
@@ -26,5 +30,13 @@ public class Client {
 
     public void setEuroAccount(Account euroAccount) {
         this.euroAccount = euroAccount;
+    }
+
+    public String getCnp() {
+        return cnp;
+    }
+
+    public void setCnp(String cnp) {
+        this.cnp = cnp;
     }
 }

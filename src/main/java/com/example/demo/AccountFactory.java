@@ -1,3 +1,5 @@
+package com.example.demo;
+
 public class AccountFactory {
     public Account getType(String accountType){
         if(accountType == null){

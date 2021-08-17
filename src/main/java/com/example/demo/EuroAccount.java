@@ -1,10 +1,12 @@
+package com.example.demo;
+
 public class EuroAccount implements Account{
     private float euroAmount;
     private String accountNr;
 
     public EuroAccount(){
         euroAmount = 0;
-        accountNr = "EUR" + Math.random() * 100000;
+        accountNr = "EUR" + (int) (Math.random() * 100000);
     }
 
     @Override
