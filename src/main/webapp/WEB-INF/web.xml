@@ -24,4 +24,24 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>anaf</servlet-name>
+        <servlet-class>com.example.demo.AnafServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>anaf</servlet-name>
+        <url-pattern>/anaf</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <servlet-class>com.example.demo.ClientHomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
 </web-app>

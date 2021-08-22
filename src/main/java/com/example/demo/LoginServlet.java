@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
         int isAnaf = -1;
         String sqlPassword = "";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "root");
             Statement stmt = con.createStatement();
@@ -38,6 +38,11 @@ public class LoginServlet extends HttpServlet {
 
         if (isAnaf == 0 && password.equals(sqlPassword)) {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("clientHome.jsp");
+            requestDispatcher.forward(req, resp);
+        }
+
+        if (isAnaf == 1 && password.equals(sqlPassword)) {
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("anaf.jsp");
             requestDispatcher.forward(req, resp);
         }
         return;

@@ -6,15 +6,20 @@ public class Client {
     private Account ronAccount;
     private Account euroAccount;
 
-    public Client(String cnp, String password, String ronAmount, String euroAmount){
+    public Client(String cnp, String password, String accountType1, String accountType2){
         this.cnp = cnp;
         this.password = password;
         AccountFactory accountFactory= new AccountFactory();
-        ronAccount = accountFactory.getType(ronAmount);
-        euroAccount = accountFactory.getType(euroAmount);
+        ronAccount = accountFactory.getType(accountType1);
+        euroAccount = accountFactory.getType(accountType2);
     }
 
-    public Client(){}
+    public Client(String cnp, String password, String ronAccountNr, String euroAccountNr, float soldRON, float soldEURO){
+        this.cnp = cnp;
+        this.password = password;
+        this.ronAccount = new RONAccount(soldRON, ronAccountNr);
+        this.euroAccount = new EuroAccount(soldEURO, euroAccountNr);
+    }
 
     public Account getRonAccount() {
         return ronAccount;

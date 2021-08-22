@@ -25,15 +25,11 @@ public class Bank {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/bank","root","root");
+                    "jdbc:mysql://localhost:3306/bank?serverTimezone=UTC","root","root");
             Statement stmt = con.createStatement();
             stmt.execute("delete from accounts where username = '" + username + "'");
             stmt.execute("delete from client where cnp = '" + username + "'");
             con.close();
         }catch(Exception e){ System.out.println(e);}
-    }
-
-    public void deleteClients(){
-
     }
 }

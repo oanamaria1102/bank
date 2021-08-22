@@ -64,11 +64,36 @@
 %>
 <div class="clientContainer">
   <h4><a href="queryBalance.jsp?usn=<%=username%>">Query balance.</a></h4>
-  <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Add money to EURO account.</a></h4>
-  <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Add money to RON account.</a></h4>
-  <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Withdraw money from the EURO account.</a></h4>
-  <h4><a href="/Users/oanam/Desktop/BankDesign/register.html">Withdraw money from the RON account.</a></h4>
-  <h4><a href="index.jsp" onclick="<%Bank.closeAccount(username);%>">Close account.</a></h4>
+  <form action="home" method="post">
+    <label for="adde">Add money to EURO account (minimum amount accepted is 1000EURO):</label><br>
+    <input type="hidden" name="usn" value="<%=username%>">
+    <input type="text" id="adde" name="adde"><br>
+    <input type="submit" value="Add EURO">
+  </form>
+  <form action="home" method="post">
+    <label for="addr">Add money to RON account (minimum amount accepted is 1000RON):</label><br>
+    <input type="hidden" name="usn" value="<%=username%>">
+    <input type="text" id="addr" name="addr"><br>
+    <input type="submit" value="Add RON">
+  </form>
+  <form action="home" method="post">
+    <label for="we">Withdraw money from the EURO account:</label><br>
+    <input type="hidden" name="usn" value="<%=username%>">
+    <input type="text" id="we" name="we"><br>
+    <input type="submit" value="Withdraw EURO">
+  </form>
+  <form action="home" method="post">
+    <label for="wr">Withdraw money from the RON account:</label><br>
+    <input type="hidden" name="usn" value="<%=username%>">
+    <input type="text" id="wr" name="wr"><br>
+    <input type="submit" value="Withdraw RON">
+  </form>
+  <h4>
+    <form action="home" method="post">
+      <input type="hidden" name="usn" value="<%=username%>">
+      <input type="submit" name="close" value="Close account">
+    </form>
+  </h4>
 </div>
 </body>
 </html>
